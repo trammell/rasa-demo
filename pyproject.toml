@@ -1,14 +1,28 @@
+[tool.poetry]
+name = "rasa-demo"
+version = "2.1"
+description = "Rasa demo bot"
+authors = ["Rasa Technologies Incorporated <support@rasa.com>"]
+license = "GNU General Public License v3.0"
+readme = "README.md"
+packages = [{include = "rasa_demo"}]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.9"
+rasa = "^2.8.21"
+SQLAlchemy = "^1.4"
+decorator = "^4.4.2"
+packaging = ">=20.0,<21.0"
+websockets = "^10.0"    # avoid websockets v11 incompatibilities
+
+[tool.poetry.dev-dependencies]
+black = "^22.0"
+flake8 = "^5.0.4"
+pytest = "^7.3.0"
+
 [tool.black]
 line-length = 88
-target-version = ['py38']
-exclude = '''
-(
-  /(
-      \.eggs
-    | \.git
-    | \.pytest_cache
-    | build
-    | dist
-  )/
-)
-'''
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
