@@ -1,4 +1,7 @@
+.envrc
+.venv/
 venv3/
+
 travis_gcloud_auth.json
 docker-compose.override.yml
 .DS_Store
@@ -13,7 +16,7 @@ story_confmat.pdf
 demo/index.html
 credentials.yml
 .idea
-test_train_split
+test_train_split/
 results
 .history
 rasa.*
